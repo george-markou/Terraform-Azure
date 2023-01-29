@@ -58,3 +58,17 @@ resource "azurerm_management_group_policy_assignment" "res-0" {
     type = "SystemAssigned"
   }
 }
+
+resource "azurerm_management_group_policy_assignment" "res-0" {
+  description          = "Ensures that Activity Log Diagnostics settings are set to push logs into Log Analytics workspace."
+  display_name         = "Deploy Diagnostic Settings for Activity Log to Log Analytics workspace"
+  location             = "eastus"
+  management_group_id  = "/providers/Microsoft.Management/managementGroups/101"
+  name                 = "Deploy-AzActivity-Log"
+  parameters           = "{\"logAnalytics\":{\"value\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/101-mgmt/providers/Microsoft.OperationalInsights/workspaces/101-la\"}}"
+  policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f"
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
