@@ -9,19 +9,16 @@ module "private_dns_zone" {
   source                    = "github.com/george-markou/Terraform-Azure//Network/privateDnsZone"
   resource_group_name       = "my-resource-group"
   virtual_network_name      = "my-vnet"
-  private_dns_zone_name     = "myprivatednszone.local"
-  private_dns_zone_location = "westus2"
-  dns_records               = [
-    {
-      name    = "my-record"
-      type    = "A"
-      records = ["10.0.0.1", "10.0.0.2"]
-    }
+  private_dns_zone_name     = [
+  "myfirstprivatednszone.local",
+  "mysecondprivatednszone.local",
   ]
+  
+  private_dns_zone_location = "westus2"
 }
 ```
 
-This example creates a new Private DNS Zone called myprivatednszone.local in the westus2 region and attaches it to the virtual network called my-vnet. It also creates an A record set called my-record with two IP addresses.
+This example creates two new Private DNS Zones called in the westus2 region and attaches them to the virtual network called my-vnet.
 
 <h2>Input Variables</h2>
 The module accepts the following input variables:
