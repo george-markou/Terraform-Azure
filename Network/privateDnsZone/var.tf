@@ -1,11 +1,16 @@
 variable "dns_zone_name" {
   type        = list(string)
-  default     = ["zone1", "zone2", "zone3"]
+  description = "(Required) An array of dns zones to be created."
+  default     = [
+    "zone1",
+    "zone2",
+    "zone3"
+  ]
 }
 
 variable "resource_group_name" {
   type = string
-  description = "The resource group name"
+  description = "(Required) The resource group name."
 }
 
 variable "use_for_each" {
@@ -17,10 +22,10 @@ variable "use_for_each" {
 
 variable "virtual_network_id" {
   type = string
-  description = "The id of the virtual network"
+  description = "(Required) The id of the virtual network."
 }
 
 variable "network_link_name" {
   type = string
-  description = "The network link name"
+  description = "(Required) The network link name."
 }
