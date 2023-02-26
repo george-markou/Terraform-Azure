@@ -13,13 +13,13 @@ Before you can use this Terraform code, you'll need to have the following instal
 To get started with this Terraform code, follow these steps:
 <br></br>
 
-1. Clone the repository: git clone https://github.com/george-markou/Terraform-Azure.git
-2. Navigate to the repository: cd Terraform-Azure
-3. Initialize Terraform: terraform init
-4. Authenticate with Azure: az login
-5. Set your Azure subscription: az account set --subscription <subscription_id>
-6. Plan the Terraform deployment: terraform plan
-7. Deploy the Terraform infrastructure: terraform apply
+1. Clone the repository:<b> git clone https://github.com/george-markou/Terraform-Azure.git</b>
+2. Navigate to the repository: <b>cd Terraform-Azure</b>
+3. Initialize Terraform: <b>terraform init</b>
+4. Authenticate with Azure: <b>az login</b>
+5. Set your Azure subscription: <b>az account set --subscription <subscription_id></b>
+6. Plan the Terraform deployment: <b>terraform plan</b>
+7. Deploy the Terraform <b>infrastructure: terraform apply</b>
 
 <h2>Cleaning up</h2>
 To delete the Terraform infrastructure and any resources created by it, run <b>terraform destroy</b>.
