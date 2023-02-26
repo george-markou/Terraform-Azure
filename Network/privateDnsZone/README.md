@@ -20,7 +20,7 @@ module "private_dns_zone" {
 }
 ```
 
-This example creates two new Private DNS Zones called in the westus2 region and attaches them to the virtual network called my-vnet.
+This example creates two new Private DNS Zones and attaches them to a virtual network.
 
 <h2>Input Variables</h2>
 The module accepts the following input variables:
