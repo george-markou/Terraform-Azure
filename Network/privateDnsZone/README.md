@@ -2,7 +2,7 @@
 This Terraform module helps you create a single or mutliple private DNS zone in Azure, along with all the necessary resources like a virtual network.
 
 <h2>Usage</h2>
-You can use this module in your Terraform configuration by including it as a module and providing the required input variables. Here is an example of how to use the module to create two Private DNS Zones and link them to a virtual network:
+You can use this module in your Terraform configuration by including it as a module and providing the required input variables. Here is an example of how to use the module to create two Private DNS Zones and attach them to a virtual network:
 
 ```hcl
 module "private_dns_zone" {
