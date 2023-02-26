@@ -29,3 +29,9 @@ variable "network_link_name" {
   type = string
   description = "(Required) The network link name."
 }
+
+variable "tags" {
+  description = "(Optional) A mapping of tags which should be assigned to the Resource Group."
+  type = map(string)
+  default = null
+}
