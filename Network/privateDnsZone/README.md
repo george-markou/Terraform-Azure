@@ -7,14 +7,16 @@ You can use this module in your Terraform configuration by including it as a mod
 ```hcl
 module "private_dns_zone" {
   source                    = "github.com/george-markou/Terraform-Azure//Network/privateDnsZone"
-  resource_group_name       = "my-resource-group"
-  virtual_network_name      = "my-vnet"
-  private_dns_zone_name     = [
+  resource_group_name       = "rgtest"
+  dns_zone_name     = [
   "myfirstprivatednszone.local",
   "mysecondprivatednszone.local",
   ]
-  
-  private_dns_zone_location = "westus2"
+  network_link_name = "link-to-vnet"
+  virtual_network_id = "/subscriptions/<subcription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>"
+  tags = {
+    "Environment" = "Prod"
+  }
 }
 ```
 
