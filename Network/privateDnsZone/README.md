@@ -28,19 +28,17 @@ The module accepts the following input variables:
 |Variable |	Description| Type|	Required|
 |---|---|---|---|
 |`resource_group_name`|	The name of the resource group in which to create the Private DNS Zone.|	string|	Yes|
-|`virtual_network_name`|	The name of the virtual network to which the Private DNS Zone should be attached.|	string|	Yes|
-|`private_dns_zone_name`|	The name of the Private DNS Zone to create or attach to.|	string|	Yes|
-|`private_dns_zone_location`|	The location of the Private DNS Zone.|	string|	Yes|
-|`dns_records`|	A list of DNS record sets to add to the Private DNS Zone. Each item in the list must be an object with the name, type, and records attributes.|	list(object({name = string, type = string, records = list(string)}))|	No
+|`dns_zone_name`|	An array of dns zones to be created.|	list(string)|	Yes|
+|`network_link_name`|	The network link name.|	string|	Yes|
+|`virtual_network_id`|	The id of the virtual network.|	string|	Yes
+|`tags`|	The location of the Private DNS Zone.|	map(string)|	No|
 
 <h2>Output Values</h2>>
 The module exports the following output values:
 
 |Output|	Description|
 |---|---|
-|`private_dns_zone_id`|	The ID of the Private DNS Zone.|
-|`private_dns_zone_name`|	The name of the Private DNS Zone.|
-|`virtual_network_link_id`|	The ID of the virtual network link.|
+|`id`|	The ID of the Private DNS Zone.|
 
 <h2>Authors</h2>
 This Terraform module is maintained by George Markou.
