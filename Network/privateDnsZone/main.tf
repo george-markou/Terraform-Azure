@@ -3,11 +3,7 @@ resource "azurerm_private_dns_zone" "pvdns" {
   
   name                = var.dns_zone_name[count.index]
   resource_group_name = var.resource_group_name
-  lifecycle {
-    ignore_changes = [
-      tags,
-    ]
-  }
+  tags = var.tags
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "example" {
@@ -18,13 +14,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "example" {
   private_dns_zone_name = var.dns_zone_name[count.index]
   virtual_network_id    = var.virtual_network_id
 
-lifecycle {
-    ignore_changes = [
-      tags,
-    ]
-  }
-
-   depends_on = [
+  depends_on = [
     azurerm_private_dns_zone.pvdns
  ]
 }
