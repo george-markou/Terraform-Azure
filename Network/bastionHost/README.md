@@ -11,15 +11,14 @@ module "bastion_host" {
   location              = "eastus"
   pip_name              = "my-bas-pip-01"
   bastion_name          = "my-bas-01
-  subnet_id             = "my-subnet"
+  subnet_id             = "/subscriptions/<subcription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
   copy_paste_enabled    = true
   file_copy_enabled     = false
   ip_connect_enabled    = true
   shareable_link_enabled = true
   sku                   = "Standard"
   tags = {
-    environment = "dev"
-    owner       = "me"
+    "Environment" = "Production"
   }
 }
 ```
