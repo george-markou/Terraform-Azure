@@ -33,10 +33,10 @@ This module requires the following inputs:
 |`pip_name`|	Specifies the name of the Public IP.|	string|	Yes|
 |`bastion_name`|	Specifies the name of the Bastion Host.|	string|	Yes|
 | `subnet_id`| Reference to a subnet in which this Bastion Host has been created. | string| Yes|
-| `copy_paste_enabled`| Is Copy/Paste feature enabled for the Bastion Host. Defaults to true.| string| No|
-| `file_copy_enabled`| Is File Copy feature enabled for the Bastion Host. Defaults to false.| string| No|
-| `ip_connect_enabled`|Is IP Connect feature enabled for the Bastion Host. Defaults to false.| string| No|
-| `shareable_link_enabled`|Is Shareable Link feature enabled for the Bastion Host. Defaults to false.| string| No|
+| `copy_paste_enabled`| Is Copy/Paste feature enabled for the Bastion Host. Defaults to true.| bool| No|
+| `file_copy_enabled`| Is File Copy feature enabled for the Bastion Host. Defaults to false.| bool| No|
+| `ip_connect_enabled`|Is IP Connect feature enabled for the Bastion Host. Defaults to false.| bool| No|
+| `shareable_link_enabled`|Is Shareable Link feature enabled for the Bastion Host. Defaults to false.| bool| No|
 | `sku`|The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.| string| No|
 |`tags`|	A map of tags to apply to the resources created by this module.|	map(string)|	No|
 
@@ -45,7 +45,11 @@ This module exports the following outputs:
 
 |Output|	Description|
 |---|---|
-|`name`|	The name of the Azure Bastion Host resource.|
+|`bastion_name`|	The name of the bastion resource.|
+|`bastion_id`|	The ID of the Bastion Host.|
+|`dns_name`|	The FQDN for the Bastion Host.|
+|`pip_id`|	The FQDN for the Bastion Host.|
+|`pip_address`|	The IP address value that was allocated.|
 
 <h2>Contributing</h2>
 Contributions to this module are welcome! If you find a bug or want to suggest a new feature, please open an issue or submit a pull request.
