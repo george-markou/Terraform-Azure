@@ -41,7 +41,7 @@ This module requires the following inputs:
 | `sku`|The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.| string| No|
 |`tags`|	A map of tags to apply to the resources created by this module.|	map(string)|	No|
 
-<h2>Outputs</h2>
+<h2>Output Values</h2>
 This module exports the following outputs:
 
 |Output|	Description|
