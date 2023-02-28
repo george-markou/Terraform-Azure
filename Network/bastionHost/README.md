@@ -16,6 +16,7 @@ module "bastion_host" {
   file_copy_enabled     = false
   ip_connect_enabled    = true
   shareable_link_enabled = true
+  tunneling_enabled     = false
   sku                   = "Standard"
   tags = {
     "Environment" = "Production"
@@ -37,7 +38,7 @@ This module requires the following inputs:
 | `file_copy_enabled`| Is File Copy feature enabled for the Bastion Host. Defaults to false.| bool| No|
 | `ip_connect_enabled`|Is IP Connect feature enabled for the Bastion Host. Defaults to false.| bool| No|
 | `shareable_link_enabled`|Is Shareable Link feature enabled for the Bastion Host. Defaults to false.| bool| No|
-| `sku`|The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.| string| No|
+| `tunneling_enabled`|Is Tunneling feature enabled for the Bastion Host. Defaults to false.| bool| No|
 |`tags`|	A map of tags to apply to the resources created by this module.|	map(string)|	No|
 
 <h2>Output Values</h2>
