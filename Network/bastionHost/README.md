@@ -1,5 +1,9 @@
 <h1>Terraform Azure Bastion Host Module</h1>
-This Terraform module deploys an Azure Bastion Host along with a Public IP Address, which provides secure and seamless Remote Desktop Protocol (RDP) and Secure Shell (SSH) access to virtual machines (VMs) inside a Virtual Network (VNet).
+This Terraform module makes it easy to deploy an Azure Bastion Host , providing secure and seamless Remote Desktop Protocol (RDP) and Secure Shell (SSH) access to virtual machines (VMs) inside a Virtual Network (VNet).
+
+By using this module, you can deploy a Bastion Host quickly and easily, without the need to manually configure public IP addresses.
+
+Simply specify the required input parameters, and this module will take care of the rest, creating a Bastion Host and configuring all the necessary resources to enable secure remote access to your VMs.
 <br></br>
 <h2>Usage</h2>
 To use this module, include the following code in your Terraform configuration:
