@@ -6,7 +6,7 @@ By using this module, you can deploy a Bastion Host quickly and easily, without 
 Simply specify the required input parameters, and this module will take care of the rest, creating a Bastion Host and configuring all the necessary resources to enable secure remote access to your VMs.
 <br></br>
 <h2>Usage</h2>
-To use this module, include the following code in your Terraform configuration:
+You can use this module in your Terraform configuration by including it as a module and providing the required input variables. Here is an example of how to use the module to create an Azure Bastion Host along with Public IP Address:
 
 ```hcl
 module "bastion_host" {
