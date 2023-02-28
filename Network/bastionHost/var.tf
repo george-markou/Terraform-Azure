@@ -53,6 +53,12 @@ variable "shareable_link_enabled" {
   default = null
 }
 
+variable "tunneling_enabled" {
+  type = bool
+  description = "(Optional) Is Tunneling feature enabled for the Bastion Host. Defaults to false."
+  default = null
+}
+
 variable "tags" {
   description = "(Optional) A mapping of tags which should be assigned to the Azure Bastion Host and Public IP resources."
   type = map(string)
