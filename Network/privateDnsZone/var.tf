@@ -31,7 +31,7 @@ variable "network_link_name" {
 }
 
 variable "tags" {
-  description = "(Optional) A mapping of tags which should be assigned to the Resource Group."
+  description = "(Optional) A mapping of tags which should be assigned to Private DNS Zone resources."
   type = map(string)
   default = null
 }
