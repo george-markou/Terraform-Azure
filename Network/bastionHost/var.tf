@@ -26,7 +26,7 @@ variable "subnet_id" {
 variable "copy_paste_enabled" {
   type = bool
   description = "(Optional) Is Copy/Paste feature enabled for the Bastion Host. Defaults to true."
-  default = true
+  default = null
 }
 
 variable "file_copy_enabled" {
@@ -38,7 +38,7 @@ variable "file_copy_enabled" {
 variable "sku" {
   type = string
   description = "(Optional) The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic."
-  default = "Basic"
+  default = null
 }
 
 variable "ip_connect_enabled" {
