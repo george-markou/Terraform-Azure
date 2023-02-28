@@ -14,7 +14,7 @@ module "bastion_host" {
   resource_group_name   = "my-resource-group"
   location              = "eastus"
   pip_name              = "my-bas-pip-01"
-  bastion_name          = "my-bas-01
+  bastion_name          = "my-bas-01"
   subnet_id             = "/subscriptions/<subcription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
   copy_paste_enabled    = true
   file_copy_enabled     = false
