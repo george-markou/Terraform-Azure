@@ -31,7 +31,7 @@ The module accepts the following input variables:
 |`dns_zone_name`|	An array of dns zones to be created.|	list(string)|	Yes|
 |`network_link_name`|	The network link name.|	string|	Yes|
 |`virtual_network_id`|	The id of the virtual network.|	string|	Yes
-|`tags`|	The location of the Private DNS Zone.|	map(string)|	No|
+|`tags`|	A mapping of tags which should be assigned to Private DNS Zone resources.|	map(string)|	No|
 
 <h2>Output Values</h2>>
 The module exports the following output values:
